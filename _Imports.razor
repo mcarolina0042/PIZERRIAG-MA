@@ -7,4 +7,10 @@
 @using Microsoft.AspNetCore.Components.Web.Virtualization
 @using Microsoft.JSInterop
 @using PIZZASG_M
+@using PIZZASG_M.Data.Services;
 @using PIZZASG_M.Shared
+
+@inject IClienteServices ClienteServices;
+@inject IFacturaServices FacturaServices;
+@inject IPizzaServices PizzaServices;
+@inject IUsuarioServices UsuarioServices;

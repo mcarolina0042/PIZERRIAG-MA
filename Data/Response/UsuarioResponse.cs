@@ -1,4 +1,6 @@
-﻿namespace PIZZASG_M.Data.Response
+﻿using PIZZASG_M.Data.Request;
+
+namespace PIZZASG_M.Data.Response
 {
     public class UsuarioResponse
     {
@@ -11,5 +13,20 @@
 
 
         public string Sexo { get; set; } = null!;
-    }
+
+		public UsuarioRequest ToRequest()
+		{
+			return new UsuarioRequest
+			{
+				Id = Id,
+				Nombre = Nombre,
+				Email = Email,
+				Contraseña = Contraseña,
+				Sexo = Sexo
+
+			};
+
+		}
+	}
 }
+

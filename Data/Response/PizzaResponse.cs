@@ -1,4 +1,7 @@
-﻿namespace PIZZASG_M.Data.Response
+﻿using PIZZASG_M.Data.Models;
+using PIZZASG_M.Data.Request;
+
+namespace PIZZASG_M.Data.Response
 {
     public class PizzaResponse
     {
@@ -10,5 +13,18 @@
 
 
         public decimal Precio { get; set; }
-    }
+
+		public PizzaRequest ToRequest()
+		{
+			return new PizzaRequest
+			{
+				Id = Id,
+				Nombre = Nombre,
+				Tamaño = Tamaño,
+				Precio = Precio,
+				
+			};
+
+		}
+	}
 }
